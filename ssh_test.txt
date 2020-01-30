@@ -1,1 +1,88 @@
 ssh key genaration process:
+
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$ ssh-keygen -t rsa -b 4096 -C "git.hub7320@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/uzzal.hossain/.ssh/id_rsa): ssh_key
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in ssh_key.
+Your public key has been saved in ssh_key.pub.
+The key fingerprint is:
+SHA256:tkbd+HYVVbTVlNgrNLjbqFHCqMMP8f8NkgXyrJ5tWH0 git.hub7320@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|            . ooX|
+|           . + o=|
+|       .o.  o .o.|
+|     . .++.= . ..|
+|    . + So*.= . .|
+|     = +.+o= E . |
+|      +.*oo.+ .  |
+|      .+o+..o.   |
+|       o.... .   |
++----[SHA256]-----+
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$ eval $(ssh-agent -s)
+Agent pid 1419
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$ ssh-add ~/.ssh/id_rsa
+/c/Users/uzzal.hossain/.ssh/id_rsa: No such file or directory
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$  ssh-keygen -t rsa -b 4096 -C "git.hub7320@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/uzzal.hossain/.ssh/id_rsa):
+Created directory '/c/Users/uzzal.hossain/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/uzzal.hossain/.ssh/id_rsa.
+Your public key has been saved in /c/Users/uzzal.hossain/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:RCJR9TnO4MixuMEV2ZhBOVp1Egv5mAp2Gj2XcE0nIDc git.hub7320@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|    ++E#O.o      |
+|    .+X*oB .     |
+|   . =o*+ +      |
+|  +.=+=*.+ .     |
+| . =+++ S o      |
+|  . .o           |
+|    .            |
+|                 |
+|                 |
++----[SHA256]-----+
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$ eval $(ssh-agent -s)
+Agent pid 1432
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$  ssh-add ~/.ssh/id_rsa
+Enter passphrase for /c/Users/uzzal.hossain/.ssh/id_rsa:
+Identity added: /c/Users/uzzal.hossain/.ssh/id_rsa (git.hub7320@gmail.com)
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$ clip < ~/.ssh/id_rsa.pub
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$ git remote add origin https://github.com/github7320/repo_ssh.git
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$ git push -u origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 466 bytes | 155.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/github7320/repo_ssh.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
+$
+
