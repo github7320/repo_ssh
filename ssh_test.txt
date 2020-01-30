@@ -85,4 +85,5 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 uzzal.hossain@N1089 MINGW64 ~/Desktop/GIT/ssh_test (master)
 $
-
+git fetch
+git pull
